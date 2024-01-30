@@ -52,3 +52,37 @@ fn main() {
 }
 ```
 
+## Arrays
+- collections
+- can hold multiple values of **single** data type
+- very fast to use at runtime
+- fixed size
+```rust
+// manual initialization
+fn main() {
+	let array : [i32; 5] = [1,2,3,4,5];
+}
+
+// automatic initialization
+fn main() {
+	let array : [i32; 1000] = [0; 1000]; // set each value to zero
+}
+```
+- accessed by index with **square brackets**(`[]`)
+- "zero-indexed" : first element's index is `0`
+```rust
+fn main() {
+	let array : [i32; 5] = [1,2,3,4,5];
+	println!("{}", array[2]); // this will output 3
+}
+```
+
+## Tuples
+- mostly same as [[#Arrays]].
+- can hold multiple values of **different** data types
+- accessed via *period*(`.`)
+```rust
+fn main() {
+	let tuple:(&str, &str, i32) = ("Charles","Darwin",1882);
+}
+```
