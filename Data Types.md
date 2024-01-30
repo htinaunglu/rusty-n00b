@@ -32,3 +32,23 @@ fn main(){
 	let f64 : f64 = -6.9;
 }
 ```
+
+## Booleans
+- true or false value.
+- "decisions"
+```rust
+fn main() {
+	let bool : bool = true;
+}
+```
+
+## Characters
+- single letter or number.
+- rust uses 4 bytes for `char`, any character in **UTF-32**.
+- defined with **Single quotes** 
+```rust
+fn main() {
+	let char : char = 'A';
+}
+```
+
