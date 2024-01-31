@@ -84,5 +84,20 @@ fn main() {
 ```rust
 fn main() {
 	let tuple:(&str, &str, i32) = ("Charles","Darwin",1882);
+	println!("{} {} was born in {}.", tuple.0, tuple.1, tuple.2);
 }
 ```
+- "deconstruction" concept
+```Rust
+fn main() {
+	let tuple:(&str,&str,i32) = ("Charles", "Dickens", 1812);
+	let (first_name:&str, last_name:&str, dob:i32) = tuple;
+	println!("{} {} was born in {}."), first_name, last_name, dob);
+}
+```
+
+## Strings
+- two types, `String` and `&str`(*string slice*)
+- `String` - *mutable* - stored on *heap*
+- `&str` - *immutable* - stored on *stack*
+- 
