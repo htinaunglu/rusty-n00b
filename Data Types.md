@@ -100,4 +100,63 @@ fn main() {
 - two types, `String` and `&str`(*string slice*)
 - `String` - *mutable* - stored on *heap*
 - `&str` - *immutable* - stored on *stack*
-- 
+```rust
+fn main() {
+	let slice:&str = "Charles Dickens";
+}
+```
+
+```rust
+// conversion ".to_string()", "String::from()" methods
+fn main() {
+	let slice:&str = "Charles Darwin";
+	
+	let str:String = slice.to_string();
+	// or
+	let str:String = "Charles Darwin".to_string();
+	// or
+	let str:String = String::from(s:"Charles Dickens");
+}
+```
+
+```rust
+// conversion revert way
+fn main() {
+	let str:String = String::From(s:"Charles Darwin");
+	let slice : (&str) = &str;
+	// or
+	let slice:&str = str.as_str();
+}
+```
+
+- There is no real conversion, we just access the pointer for the string in memory
+```rust
+// concatenate
+fn main() {
+	let first_name:&str = "Rusta";
+	let last_name:&str = "Busta";
+	let full_name:String = format!("{} {}"), first_name, last_name);
+
+	println!("{}", full_name);
+}
+```
+
+```rust
+// another method with array
+fn main() {
+	let first_name:&str = "Rusta";
+	let last_name:&str = "Busta";
+	let full_name:String = [first_name, " ", last_name].concat();
+
+	println!("{}", full_name);
+```
+
+```rust
+// if String is mutable
+fn main() {
+	let mut name:String = String::from(s:"Rasta");
+	name.push_str(string:" Busta");
+
+	println!("{}", name);
+}
+```
