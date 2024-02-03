@@ -142,7 +142,7 @@ fn main() {
 ```
 
 ```rust
-// another method with array
+// another method with array // cpncat()
 fn main() {
 	let first_name:&str = "Rusta";
 	let last_name:&str = "Busta";
@@ -152,11 +152,20 @@ fn main() {
 ```
 
 ```rust
-// if String is mutable
+// if String is mutable // push_str()
 fn main() {
 	let mut name:String = String::from(s:"Rasta");
 	name.push_str(string:" Busta");
 
 	println!("{}", name);
+}
+```
+
+```rust
+// "+" can be used, only append string slice to String
+fn main() {
+	let first_name:String = String::from(s:"Rasta");
+	let full_name:String = first_name + " Busta";
+	println!("{}", full_name);
 }
 ```
